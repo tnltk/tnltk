@@ -20,7 +20,7 @@ author = 'Tarık Kaan Koç'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
-version = '0.1.0'
+version = 'latest'
 
 
 # -- General configuration ---------------------------------------------------
@@ -64,7 +64,7 @@ html_static_path = ['_static']
 
 # Below html_theme_options config depends on the theme. 
 
-html_logo = '_static/logo_whitte.png'
+html_logo = '_static/tnltk_logo_whitte.png'
 
 html_theme_options = {
     'logo_only': True,
