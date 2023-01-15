@@ -1,8 +1,9 @@
 Quickstart
-===================================
+===========
 
 Installation Guide
-------------
+==================
+
 
 You can install TNLTK library using ``pip`` package manager.
 
