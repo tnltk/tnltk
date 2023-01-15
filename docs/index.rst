@@ -22,6 +22,6 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tutorials
+   :caption: Features
 
-   source/_tutorials/normalization
+   source/_features/normalization
