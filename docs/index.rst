@@ -24,4 +24,4 @@ Contents
    :maxdepth: 2
    :caption: Tutorials
 
-   _tutorials/normalization
+   source/_tutorials/normalization
