@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from unittest import TestCase
-from tnltk.sentence_splitter.sentence_splitter import SentenceSplitter 
+from tnltk import SentenceSplitter 
 
 class TestSentenceSplitter(TestCase):
     
