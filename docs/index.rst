@@ -24,4 +24,4 @@ Contents
    :maxdepth: 2
    :caption: Features
 
-   source/_features/normalization
+   source/_features/sentence_splitter
