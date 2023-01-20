@@ -13,10 +13,9 @@ non_breaking_prefixes_tr = [
 
 class SentenceSplitter:
     """
-    SentenceSplitter is a class used for splitting a text into sentences by considering Turkish non-breaking prefixes.
-
-
-    Methods:
+    SentenceSplitter is a class used for splitting a text into sentences by considering `Turkish non-breaking prefixes <https://github.com/tnltk/tnltk/blob/main/data/non_breaking_prefixes_tr.txt>`_
+     
+    Methods: 
     ----------
     split_sentences(text: str) : List[str]
         Split the given text into sentences by considering Turkish non-breaking prefixes.
@@ -42,7 +41,7 @@ class SentenceSplitter:
         >>> splitter = SentenceSplitter()
         >>> text = "Bu cümle bir örnektir. Bu cümle de bir örnektir!"
         >>> splitter.split_sentences(text)
-        ["Bu cümle bir örnektir.", "Bu cümle de bir örnektir!"]
+        ["Bu cümle bir örnektir.", "Bu cümle de bir örnektir!"
         """
         # Create a regex pattern for prefixes
         prefix_pattern = "(" + "|".join(non_breaking_prefixes_tr) + r")\."

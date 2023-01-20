@@ -7,15 +7,7 @@ Sentence Splitter is a piece of software that can be used to separate a text int
 
 * **Improved accuracy:** Sentence splitting is a key step in many NLP tasks, and it is important to perform this step accurately in order to ensure the overall accuracy of the task. With Sentence Splitter, you can be confident that your text is properly split into sentences, which can improve the performance of downstream NLP tasks.
 
-Usage
-------
-.. code-block:: python
-
-   from tnltk import SentenceSplitter
-
-   text = "Dr Ahmet Öztürk, Türkiye genelinde birçok hastanede çalışmıştır. Bu hastaneler arasında Ankara Üniversitesi Tıp Fakültesi ve İstanbul Üniversitesi Tıp Fakültesi de vardır. Dr Öztürk, özellikle kalp ve damar cerrahisi alanında uzmanlaşmıştır ve uluslararası çok sayıda makale yazmıştır. Ayrıca Dr Öztürk, Türk Kardiyoloji Derneği üyesidir ve derneğin yönetim kurulu üyesi olarak görev yapmaktadır."
-   
-   splitter = SentenceSplitter()
-   sentences = splitter.split_sentences(text)
-   
-
+.. automodule:: tnltk.sentence_splitter.sentence_splitter
+   :members:
+   :undoc-members:
+   :show-inheritance:
