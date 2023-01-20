@@ -43,6 +43,7 @@ class SentenceSplitter:
         >>> splitter.split_sentences(text)
         ["Bu cümle bir örnektir.", "Bu cümle de bir örnektir!"
         """
+        
         # Create a regex pattern for prefixes
         prefix_pattern = "(" + "|".join(non_breaking_prefixes_tr) + r")\."
         # Replace all prefixes followed by a period with the prefix
