@@ -41,7 +41,7 @@ class SentenceSplitter:
         >>> splitter = SentenceSplitter()
         >>> text = "Bu cümle bir örnektir. Bu cümle de bir örnektir!"
         >>> splitter.split_sentences(text)
-        ["Bu cümle bir örnektir.", "Bu cümle de bir örnektir!"
+        ["Bu cümle bir örnektir.", "Bu cümle de bir örnektir!"]
         """
         
         # Create a regex pattern for prefixes
@@ -50,4 +50,5 @@ class SentenceSplitter:
         text = re.sub(prefix_pattern, r"\1", text)
         # Use the regular expression to split the text into sentences
         sentences = re.split(r"(?<=[.!?])\s", text)
+        
         return sentences
