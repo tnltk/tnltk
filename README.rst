@@ -1,6 +1,6 @@
 Turkish Natural Language Toolkit
 ==========
-.. image:: images/tnltk_logo.png
+.. image:: assets/tnltk_logo.png
 
 Roadmap and Future Plans
 ==========
