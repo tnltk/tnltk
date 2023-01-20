@@ -3,7 +3,6 @@ from unittest import TestCase
 from tnltk import SentenceSplitter 
 
 class TestSentenceSplitter(TestCase):
-    
     """
     TestSentenceSplitter is a class that test the SentenceSplitter class by providing test cases
 
