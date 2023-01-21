@@ -38,6 +38,7 @@ class SentenceSplitter:
         
         Example:
         ----------
+        >>> from tnltk import SentenceSplitter
         >>> splitter = SentenceSplitter()
         >>> text = "Bu cümle bir örnektir. Bu cümle de bir örnektir!"
         >>> splitter.split_sentences(text)
