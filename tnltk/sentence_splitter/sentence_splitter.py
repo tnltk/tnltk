@@ -42,7 +42,7 @@ class SentenceSplitter:
         >>> splitter = SentenceSplitter()
         >>> text = "Bu cümle bir örnektir. Bu cümle de bir örnektir!"
         >>> splitter.split_sentences(text)
-        ["Bu cümle bir örnektir.", "Bu cümle de bir örnektir!"]
+        Output: ["Bu cümle bir örnektir.", "Bu cümle de bir örnektir!"]
         """
         
         # Create a regex pattern for prefixes
