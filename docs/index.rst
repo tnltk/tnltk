@@ -22,6 +22,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
+   :titlesonly:
    :caption: Features
 
    source/_features/sentence_splitter

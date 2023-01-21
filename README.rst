@@ -21,7 +21,7 @@ The TNLTK project, created by Tarık Kaan Koç, aims to empower developers and r
 ----
 
 The Turkish Natural Language Toolkit currently, it includes the following methods described in the literature:
-----
+
 
 - {To be edited...}
 - {To be edited...}
@@ -31,8 +31,8 @@ Please, refer to the `TNLTK Documentation <https://tnltk.readthedocs.io/en/lates
 
 ----
 
-Installing
-==========
+Installing Guide
+----------------
 
 Python version requirements: 3.8 <= python <= 3.10
 
@@ -44,7 +44,7 @@ Using pip
     $ pip install tnltk
 
 Contributing code to TNLTK
-============================
+--------------------------
 
 If you are interested in directly contributing to this project, please see `CONTRIBUTING <CONTRIBUTING.rst>`_.
 
@@ -83,3 +83,7 @@ This project is open source under the `LICENSE <LICENSE>`_.
 Please note that this project is provided "as is" and comes with no warranty. (Use of this software is subject to the terms of the license agreement.) This software is licensed under Apache 2.0. See `LICENSE <LICENSE>`_.
 
 If you have any questions or feedback, please feel free to reach out to `@tarikkaan1koc@gmail.com <@tarikkaan1koc@gmail.com>`_. 
+
+References
+==========
+* Koehn, P. and Schroeder, J. (n.d.). Non breaking Turkish prefixes txt file from https://github.com/mediacloud/sentence-splitter is taken from this repo
