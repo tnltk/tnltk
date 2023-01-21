@@ -1,9 +1,9 @@
 Turkish Natural Language Toolkit
-==========
+================================
 .. image:: assets/tnltk_logo.png
 
 Roadmap and Future Plans
-==========
+========================
 
 The TNLTK project is under active development and we have several plans for the future. Our main goal is to continue to improve the functionality and usability of the library, while also expanding its capabilities to cover new NLP tasks and applications. Here are some of the key features and improvements that we are currently working on or plan to implement in the near future:
 
@@ -75,6 +75,11 @@ If you find TNLTK to be useful, please consider citing it in your published work
       year = {2023},
     }
 
+References
+==========
+* Koehn, P. and Schroeder, J. (n.d.). Non breaking Turkish prefixes txt file from https://github.com/mediacloud/sentence-splitter is taken from this repo.
+* sentence-splitter. (n.d.). Retrieved from https://pypi.org/project/sentence-splitter/
+
 License
 =======
 
@@ -82,9 +87,4 @@ This project is open source under the `LICENSE <LICENSE>`_.
 
 Please note that this project is provided "as is" and comes with no warranty. (Use of this software is subject to the terms of the license agreement.) This software is licensed under Apache 2.0. See `LICENSE <LICENSE>`_.
 
-If you have any questions or feedback, please feel free to reach out to `@tarikkaan1koc@gmail.com <@tarikkaan1koc@gmail.com>`_. 
-
-References
-==========
-* Koehn, P. and Schroeder, J. (n.d.). Non breaking Turkish prefixes txt file from https://github.com/mediacloud/sentence-splitter is taken from this repo.
-* sentence-splitter. (n.d.). Retrieved from https://pypi.org/project/sentence-splitter/
+If you have any questions or feedback, please feel free to reach out to `tarikkaan1koc@gmail.com <tarikkaan1koc@gmail.com>`_. 
