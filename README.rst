@@ -86,4 +86,5 @@ If you have any questions or feedback, please feel free to reach out to `@tarikk
 
 References
 ==========
-* Koehn, P. and Schroeder, J. (n.d.). Non breaking Turkish prefixes txt file from https://github.com/mediacloud/sentence-splitter is taken from this repo
+* Koehn, P. and Schroeder, J. (n.d.). Non breaking Turkish prefixes txt file from https://github.com/mediacloud/sentence-splitter is taken from this repo.
+* sentence-splitter. (n.d.). Retrieved from https://pypi.org/project/sentence-splitter/
