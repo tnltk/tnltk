@@ -1,2 +1,0 @@
-Sentence Splitter
-=================
