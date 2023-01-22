@@ -2,16 +2,40 @@
 import string
 class Deasciifier:
       """
-      This class provides a function to deasciify a given Turkish text.
-      Input text is assumed to be utf-8 encoded and the output text is in Unicode
-      so do not forget to encode the result.
+      A class to convert an ASCII-only string to a Turkish string.
+      
+      Parameters
+      ----------
+      ascii_string : str
+            The ASCII-only string to be converted
+      
+      Attributes
+      ----------
+      ascii_string : str
+            The ASCII-only string passed as input.
+      converted_string : str
+            The converted string, initially set as the input ascii_string.
+      context_size : int
+            The number of characters to be considered as context when converting a character.
+      turkish_asciify_table : dict
+            A dictionary containing the mapping of Turkish characters to their ASCII equivalents.
+      turkish_downcase_asciify_table : dict
+            A dictionary containing the mapping of Turkish characters to their lowercase equivalents.
+      turkish_upcase_accents_table : dict
+            A dictionary containing the mapping of Turkish characters to their uppercase equivalents.
 
-      Example usage:
-
-      my_ascii_turkish_txt = "Opusmegi cagristiran catirtilar."
-      deasciifier = Deasciifier(my_ascii_turkish_txt.decode("utf-8"))
-      my_deasciified_turkish_txt = deasciifier.convert_to_turkish()
-      print my_deasciified_turkish_txt.encode("utf-8")
+      Methods
+      -------
+      print_converted_string()
+            Prints the converted string.
+      set_char_at(str, position, char)
+            Replaces the character at a specific position in a given string with a new character.
+      convert_to_turkish()
+            Converts an ASCII-only string to a Turkish string by replacing characters with their corresponding Turkish letters.
+      turkish_need_correction(char, position)
+            Check if the character needs to be corrected.
+      turkish_toggle_accent(char, position)
+            Toggles the accent of the character.
       """
 
       turkish_pattern_table = {u'c':
