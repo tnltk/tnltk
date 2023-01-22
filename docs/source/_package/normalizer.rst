@@ -15,3 +15,12 @@ Deasciifier is a class that allows for the conversion of an ASCII-only string to
    :members:
    :undoc-members:
    :show-inheritance:
+
+
+
+Normalizer Module
+------------------
+.. automodule:: tnltk.normalizer.normalizer
+   :members:
+   :undoc-members:
+   :show-inheritance:

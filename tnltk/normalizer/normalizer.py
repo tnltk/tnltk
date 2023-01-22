@@ -18,16 +18,14 @@ class Normalizer:
 
         Returns
         -------
-        str
+        text : str
             Text in lowercase form.
 
         Example:
         -------
-        
-            from tnltk import Normalizer
-            Normalizer.lower_case("Ex: İIĞÜÖŞÇ")
-        
-            'ex: iığüöşç'
+        >>> from tnltk import Normalizer
+        >>> Normalizer.lower_case("Ex: İIĞÜÖŞÇ")
+        'ex: iığüöşç'
         """
         turkish_lowercase_dict = {"İ": "i", "I": "ı", "Ğ": "ğ", "Ü": "ü", "Ö": "ö", "Ş": "ş", "Ç": "ç"}
         for k, v in turkish_lowercase_dict.items():
@@ -49,16 +47,14 @@ class Normalizer:
 
         Returns
         -------
-        str
+        text : str
             Text stripped from punctuations.
 
         Example:
         -------
-        
-            from tnltk import Normalizer
-            Normalizer.remove_punctuations("#Merhaba, Dünya!")
-        
-            'Merhaba Dünya'
+        >>> from tnltk import Normalizer
+        >>> Normalizer.remove_punctuations("#Merhaba, Dünya!")
+        'Merhaba Dünya'
         """
         return re.sub(f'[{string.punctuation}]', '', text)
 
@@ -75,16 +71,14 @@ class Normalizer:
 
         Returns
         -------
-        str
+        text : str
             Text stripped from accent marks.
 
         Example:
         -------
-        
-            from tnltk import Normalizer
-            Normalizer.remove_accent_marks("merhâbâ")
-        
-            'merhaba'
+        >>> from tnltk import Normalizer
+        >>> Normalizer.remove_accent_marks("merhâbâ")
+        'merhaba'
         """
         accent_marks = {'â':'a', 'ô':'o', 'î':'ı', 'ê':'e', 'û':'u',
                         'Â':'A', 'Ô':'o', 'Î':'ı', 'Ê':'e', 'Û': 'u'}
