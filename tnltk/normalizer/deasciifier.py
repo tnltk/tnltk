@@ -3366,9 +3366,6 @@ class Deasciifier:
                     'ı': 'I', 'İ': 'I', 'ş': 'S', 'Ş': 'S'
                 }
 
-      def print_converted_string(self):
-            print(self.converted_string)
-
       def set_char_at(self, str, position, char):
             """
             Replaces the character at a specific position in a given string with a new character.
