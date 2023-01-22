@@ -75,11 +75,6 @@ If you find TNLTK to be useful, please consider citing it in your published work
       year = {2023},
     }
 
-References
-==========
-* Koehn, P. and Schroeder, J. (n.d.). Non breaking Turkish prefixes txt file from https://github.com/mediacloud/sentence-splitter is taken from this repo.
-* sentence-splitter. (n.d.). Retrieved from https://pypi.org/project/sentence-splitter/
-
 License
 =======
 
@@ -87,4 +82,9 @@ This project is open source under the `LICENSE <LICENSE>`_.
 
 Please note that this project is provided "as is" and comes with no warranty. (Use of this software is subject to the terms of the license agreement.) This software is licensed under Apache 2.0. See `LICENSE <LICENSE>`_.
 
-If you have any questions or feedback, please feel free to reach out to `tarikkaan1koc@gmail.com <tarikkaan1koc@gmail.com>`_. 
+References
+==========
+* `Koehn, P. and Schroeder, J. (n.d.) <https://github.com/mediacloud/sentence-splitter>`_. Non breaking Turkish prefixes txt file from  is taken from this `repository <https://github.com/mediacloud/sentence-splitter>`_. (I converted it to a list Turkish prefixes, you can see it in my source code...)
+* `"A Comparative Study on Turkish Deasciification Methods" <https://www.sciencedirect.com/science/article/pii/S221509862200101X>`_, A scientific article that presents a comparison of various methods for Turkish Deasciification.
+* `This repository contains a Turkish Deasciifier implementation in Python. <https://github.com/aysnrgenc/TurkishDeasciifier>`_.
+* `This repository contains a Turkish Deasciifier implementation in Python which is based on a statistical model. <https://github.com/emres/turkish-deasciifier, >`_.
