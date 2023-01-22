@@ -88,14 +88,8 @@ Before submitting a pull request, please ensure that it meets the following guid
    
 3. If you are adding a new feature, function, etc., be sure to write test cases before submitting a pull request.
    
-4. The pull request should include tests. Test locally using **pytest** before submitting the pull request:
+4. Not all tests may be necessary for a given modification to the source code.
    
-   $ pytest --durations=0 tests/
-    
-5. Not all tests may be necessary for a given modification to the source code. We recommend using the   pytest plugin testmon (https://github.com/tarpas/pytest-testmon) to select the appropriate tests to be executed at each commit/pull request:
-    
-    $ pytest --durations=0 --testmon tests/
-   
-6. If the pull request adds functionality, the documentation should be updated. Be sure to include a docstring for new functionality and update the documentation if necessary.
+5. If the pull request adds functionality, the documentation should be updated. Be sure to include a docstring for new functionality and update the documentation if necessary. (use: numpy-docstring style)
 
-7. The pull request should be compatible with Python versions  3.8 => || <= 3.10.
+6. The pull request should be compatible with Python versions  3.8 => || <= 3.10.
