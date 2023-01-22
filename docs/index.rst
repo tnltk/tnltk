@@ -26,3 +26,4 @@ Contents
    :caption: Features
 
    source/_features/sentence_splitter
+   source/_features/deasciifier
