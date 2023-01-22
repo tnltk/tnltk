@@ -22,8 +22,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :titlesonly:
-   :caption: Features
+   :caption: Package
 
-   source/_features/sentence_splitter
-   source/_features/deasciifier
+   source/_package/sentence_splitter
+   source/_package/normalizer
