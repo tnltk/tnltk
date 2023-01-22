@@ -22,7 +22,7 @@ class Normalizer:
             Text in lowercase form.
 
         Example:
-        -------
+        --------
         >>> from tnltk import Normalizer
         >>> Normalizer.lower_case("Ex: İIĞÜÖŞÇ")
         'ex: iığüöşç'
@@ -51,7 +51,7 @@ class Normalizer:
             Text stripped from punctuations.
 
         Example:
-        -------
+        --------
         >>> from tnltk import Normalizer
         >>> Normalizer.remove_punctuations("#Merhaba, Dünya!")
         'Merhaba Dünya'
@@ -75,7 +75,7 @@ class Normalizer:
             Text stripped from accent marks.
 
         Example:
-        -------
+        --------
         >>> from tnltk import Normalizer
         >>> Normalizer.remove_accent_marks("merhâbâ")
         'merhaba'
