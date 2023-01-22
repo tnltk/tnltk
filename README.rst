@@ -86,5 +86,5 @@ References
 ==========
 * `Koehn, P. and Schroeder, J. (n.d.) <https://github.com/mediacloud/sentence-splitter>`_. Non breaking Turkish prefixes txt file from  is taken from this `repository <https://github.com/mediacloud/sentence-splitter>`_. (I converted it to a list Turkish prefixes, you can see it in my source code...)
 * `"A Comparative Study on Turkish Deasciification Methods" <https://www.sciencedirect.com/science/article/pii/S221509862200101X>`_, A scientific article that presents a comparison of various methods for Turkish Deasciification.
-* `This repository contains a Turkish Deasciifier implementation in Python. <https://github.com/aysnrgenc/TurkishDeasciifier>`_.
-* `This repository contains a Turkish Deasciifier implementation in Python which is based on a statistical model. <https://github.com/emres/turkish-deasciifier, >`_.
+* `This repository contains a Turkish Deasciifier implementation in Python. <https://github.com/aysnrgenc/TurkishDeasciifier>`_
+* `This repository contains a Turkish Deasciifier implementation in Python which is based on a statistical model. <https://github.com/emres/turkish-deasciifier,>`_

@@ -5,9 +5,7 @@ Contributing
 ============
 
 Contributions are welcome, and they are greatly appreciated! Every little bit
-helps, and credit will always be given.
-
-You can contribute in many ways:
+helps, and credit will always be given. (You can contribute in many ways.)
 
 Types of Contributions
 ----------------------
@@ -86,16 +84,10 @@ Before submitting a pull request, please ensure that it meets the following guid
 
 1. We strongly recommend creating a dedicated branch when modifying core features. This allows for easy testing by others and can then be merged into the **main** branch.
    
-3. If you are adding a new feature, function, etc., be sure to write test cases before submitting a pull request.
+2. If you are adding a new feature, function, etc., be sure to write test cases before submitting a pull request.
    
-4. The pull request should include tests. Test locally using **pytest** before submitting the pull request:
+3. Not all tests may be necessary for a given modification to the source code.
    
-   $ pytest --durations=0 tests/
-    
-5. Not all tests may be necessary for a given modification to the source code. We recommend using the   pytest plugin testmon (https://github.com/tarpas/pytest-testmon) to select the appropriate tests to be executed at each commit/pull request:
-    
-    $ pytest --durations=0 --testmon tests/
-   
-6. If the pull request adds functionality, the documentation should be updated. Be sure to include a docstring for new functionality and update the documentation if necessary.
+4. If the pull request adds functionality, the documentation should be updated. Be sure to include a docstring for new functionality and update the documentation if necessary. (use: numpy-docstring style)
 
-7. The pull request should be compatible with Python versions  3.8 => || <= 3.10.
+5. The pull request should be compatible with Python versions  3.8 => || <= 3.10.
