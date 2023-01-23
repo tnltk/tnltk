@@ -92,22 +92,6 @@ class Normalizer:
 
 
     @staticmethod
-    def number_to_word(self, number):
-        negative_expression = None
-        if int(number) < 0:
-            number = str(number).split('-')[1]
-            negative_expression = 'eksi '
-            number = int(number)
-
-        ones = ["sıfır", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz"]
-        tens = ["on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan"]
-        scales = ["", "bin", "milyon", "milyar"]
-        word = ""
-
-        if number == 0:
-            return ones[0]
-
-    @staticmethod
     def convert_text_numbers(text):
         def convert_number(match):
             number = float(match.group(0).replace(",", "."))
