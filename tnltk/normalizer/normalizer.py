@@ -1,5 +1,6 @@
 import string
 import warnings
+from _builtin import number_to_word
 import re 
 
 class Normalizer:
@@ -105,35 +106,6 @@ class Normalizer:
 
         if number == 0:
             return ones[0]
-
-        group = 0
-        while number > 0:
-            number, remainder = divmod(number, 1000)
-            if remainder > 0:
-                group_description = _convert_group(remainder, ones, tens)
-                if group > 0:
-                    group_description += " " + scales[group]
-                ne = " " if negative_expression is None else f"{negative_expression}"
-                word = ne + group_description + word
-            group += 1
-
-        return word
-
-    @staticmethod
-    def _convert_group(self, number, ones, tens):
-        word = ""
-        if number >= 100:
-            if number // 100 != 1:
-                word += ones[number // 100] + " yüz"
-            else:
-                word += "yüz"
-            number = number % 100
-        if number >= 10:
-            word += " " + tens[number // 10 - 1]
-            number = number % 10
-        if number > 0:
-            word += " " + ones[number]
-        return word.strip()
 
     @staticmethod
     def convert_text_numbers(text):
