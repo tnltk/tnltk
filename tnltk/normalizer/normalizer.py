@@ -1,10 +1,13 @@
 import string
+import warnings
 import re 
 
 class Normalizer:
+    def __init__(self):
+        pass
 
     @staticmethod
-    def lower_case(text: str) -> str:
+    def lower_case(self,text: str) -> str:
         """
         Converts a string of text to lowercase for Turkish language.
         
@@ -18,7 +21,7 @@ class Normalizer:
 
         Returns
         -------
-        text : str
+        output : str
             Text in lowercase form.
 
         Example:
@@ -34,7 +37,7 @@ class Normalizer:
 
 
     @staticmethod
-    def remove_punctuations(text: str)-> str:
+    def remove_punctuations(self, text: str)-> str:
         """
         Removes punctuations (!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~) from the given string.
         
@@ -47,7 +50,7 @@ class Normalizer:
 
         Returns
         -------
-        text : str
+        output : str
             Text stripped from punctuations.
 
         Example:
@@ -60,7 +63,7 @@ class Normalizer:
 
 
     @staticmethod
-    def remove_accent_marks(text: str)-> str:
+    def remove_accent_marks(self, text: str)-> str:
         """
         Removes accent marks from the given string.
 
@@ -85,3 +88,59 @@ class Normalizer:
         for mark, letter in accent_marks.items():
             text = text.replace(mark, letter)
         return text
+
+
+    @staticmethod
+    def number_to_word(self, number):
+        negative_expression = None
+        if int(number) < 0:
+            number = str(number).split('-')[1]
+            negative_expression = 'eksi '
+            number = int(number)
+
+        ones = ["sıfır", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz"]
+        tens = ["on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan"]
+        scales = ["", "bin", "milyon", "milyar"]
+        word = ""
+
+        if number == 0:
+            return ones[0]
+
+        group = 0
+        while number > 0:
+            number, remainder = divmod(number, 1000)
+            if remainder > 0:
+                group_description = _convert_group(remainder, ones, tens)
+                if group > 0:
+                    group_description += " " + scales[group]
+                ne = " " if negative_expression is None else f"{negative_expression}"
+                word = ne + group_description + word
+            group += 1
+
+        return word
+
+    @staticmethod
+    def _convert_group(self, number, ones, tens):
+        word = ""
+        if number >= 100:
+            if number // 100 != 1:
+                word += ones[number // 100] + " yüz"
+            else:
+                word += "yüz"
+            number = number % 100
+        if number >= 10:
+            word += " " + tens[number // 10 - 1]
+            number = number % 10
+        if number > 0:
+            word += " " + ones[number]
+        return word.strip()
+
+    @staticmethod
+    def convert_text_numbers(text):
+        def convert_number(match):
+            number = float(match.group(0).replace(",", "."))
+            if number == int(number):
+                return number_to_word(int(number)).replace("", "")
+            else:
+                return warnings.warn("In Turkish language, decimal numbers are expressed with commas.")
+        return re.sub(r"[-+]?\d*.\d+|\d+", convert_number, text.replace(',', ' virgül '))
