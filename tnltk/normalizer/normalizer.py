@@ -4,11 +4,9 @@ from _builtin import number_to_word
 import re 
 
 class Normalizer:
-    def __init__(self):
-        pass
 
     @staticmethod
-    def lower_case(self,text: str) -> str:
+    def lower_case(text: str) -> str:
         """
         Converts a string of text to lowercase for Turkish language.
         
@@ -36,9 +34,8 @@ class Normalizer:
             text = text.replace(k, v)
         return text.lower()
 
-
     @staticmethod
-    def remove_punctuations(self, text: str)-> str:
+    def remove_punctuations(text: str)-> str:
         """
         Removes punctuations (!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~) from the given string.
         
@@ -64,7 +61,7 @@ class Normalizer:
 
 
     @staticmethod
-    def remove_accent_marks(self, text: str)-> str:
+    def remove_accent_marks(text: str)-> str:
         """
         Removes accent marks from the given string.
 
