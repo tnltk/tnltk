@@ -12,3 +12,4 @@ SentenceSplitter is a module that allows for the separation of a text into sente
 * **Language Specific:** SentenceSplitter module is designed specifically for Turkish language which makes it more accurate and efficient in comparison to general sentence segmentation tools.
 
 .. autoclass:: tnltk.sentence_splitter.sentence_splitter.SentenceSplitter
+   :members:
