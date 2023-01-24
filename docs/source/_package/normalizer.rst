@@ -11,12 +11,12 @@ Deasciifier is a class that allows for the conversion of an ASCII-only string to
 * **Additional Functionality:** The class provides additional functionalities such as getting context of a point, matching pattern in the text and replacing a specific character at a given position which makes it more powerful and versatile.
 
 
-.. automodule:: tnltk.normalizer.deasciifier
-   :members:
+.. autoclass:: tnltk.normalizer.deasciifier.Deasciifier
    :exclude-members: set_char_at, turkish_get_context, turkish_need_correction, turkish_toggle_accent, turkish_match_pattern
+   :members:
 
 
 Normalizer Module
 -----------------
-.. automodule:: tnltk.normalizer.normalizer
+.. autoclass:: tnltk.normalizer.normalizer.Normalizer
    :members:
