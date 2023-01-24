@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import string
+
 class Deasciifier:
       """
       A class to convert an ASCII-only string to a Turkish string.
@@ -26,11 +27,9 @@ class Deasciifier:
 
       Methods
       -------
-      print_converted_string()
-            Prints the converted string.
       set_char_at(str, position, char)
             Replaces the character at a specific position in a given string with a new character.
-      convert_to_turkish()
+      deasciify(self)
             Converts an ASCII-only string to a Turkish string by replacing characters with their corresponding Turkish letters.
       turkish_need_correction(char, position)
             Check if the character needs to be corrected.
@@ -3392,7 +3391,8 @@ class Deasciifier:
             """
             return str[0:position] + char + str[position+1:]
 
-      def convert_to_turkish(self):
+      @staticmethod
+      def deasciify(self):
             """
             Converts an ASCII-only string to a Turkish string by replacing characters with their corresponding Turkish letters.
             The function checks if the character needs to be corrected by using the turkish_need_correction() function.
@@ -3407,7 +3407,7 @@ class Deasciifier:
             -------
             >>> ascii_string = "Tam o sirada gullerin arasindaki cicekleri kokluyorduk. Herşey işlık çaldıginda yasandi..."
             >>> deasciifier = Deasciifier(ascii_string)
-            >>> converted_string = deasciifier.convert_to_turkish()
+            >>> converted_string = deasciifier.deasciify()
             >>> print(converted_string)
             Tam o sırada güllerin arasındaki çiçekleri kokluyorduk. Herşey ıslık çaldığında yaşandı...
             """

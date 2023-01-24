@@ -1,7 +1,7 @@
 import string
 import warnings
-from _normalizer_builtin import number_to_word
-import re 
+from ._normalizer_builtin import number_to_word
+import re
 
 class Normalizer:
 
@@ -114,7 +114,7 @@ class Normalizer:
         --------
         >>> from tnltk import Normalizer
         >>> Normalizer.convert_text_numbers("Evi 1000000 TL Değerinde! Çok güzel bir evi var ama 3,5 ay boyunca satamamışlar...")
-        'Evi bir milyon bin TL Değerinde! Çok güzel bir evi var ama üç virgül beş ay boyunca satamamışlar...
+        'Evi bir milyon TL Değerinde! Çok güzel bir evi var ama üç virgül beş ay boyunca satamamışlar...
         """
         def convert_number(match):
             number = float(match.group(0).replace(",", "."))

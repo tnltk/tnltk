@@ -1,5 +1,5 @@
 """
-# _normalizer_builtin.py: A Utility Script for the normalizer script (Normalizer Class) in the Normalizer Package
+A Utility Script for the normalizer script (Normalizer Class) in the Normalizer Package
 
 _normalizer_builtin.py is a script that contains helper functions for the normalizer.py script.
 These functions are specific to the normalizer module and are used to convert numbers to words in Turkish language.
@@ -9,7 +9,6 @@ of 100 and then converting each group to words using the provided lists of ones 
 
 These functions are used by normalizer.py script to perform number to word conversion tasks.
 """
-
 
 def _convert_group(number: int, ones: list, tens: list) -> str:
     """
