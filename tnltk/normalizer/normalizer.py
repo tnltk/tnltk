@@ -118,7 +118,7 @@ class Normalizer:
         """
         def convert_number(match):
             number = float(match.group(0).replace(",", "."))
-            if number >= 1e18:
+            if number >= 1e21:
                 return warnings.warn("The number is too big to convert it to words in Turkish language.")
             elif number == int(number):
                 return number_to_word(int(number)).replace("", "")
