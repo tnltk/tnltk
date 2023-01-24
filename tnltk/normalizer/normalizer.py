@@ -1,6 +1,6 @@
 import string
 import warnings
-from _builtin import number_to_word
+from _normalizer_builtin import number_to_word
 import re 
 
 class Normalizer:
@@ -90,9 +90,37 @@ class Normalizer:
 
     @staticmethod
     def convert_text_numbers(text):
+        """
+        Convert numbers in a text to words in Turkish language
+
+        This function converts numbers in a given text to words in Turkish language.
+        The function uses regular expressions to find and extract numbers in the text,
+        and then uses the number_to_word function to convert the numbers to words.
+        If the number is too large, a warning is issued. If the decimal number is represented by a period,
+        a warning is issued. (because in Turkish language decimal number is represented by comma.)
+        The last text where numbers were converted to words is returned.
+
+        Parameters
+        ----------
+        text : str
+            The text containing numbers to be converted to words
+
+        Returns
+        -------
+        text : str
+            The text with the numbers converted to words in Turkish language
+
+        Example:
+        --------
+        >>> from tnltk import Normalizer
+        >>> Normalizer.convert_text_numbers("Evi 1000000 TL Değerinde! Çok güzel bir evi var ama 3,5 ay boyunca satamamışlar...")
+        'Evi bir milyon bin TL Değerinde! Çok güzel bir evi var ama üç virgül beş ay boyunca satamamışlar...
+        """
         def convert_number(match):
             number = float(match.group(0).replace(",", "."))
-            if number == int(number):
+            if number >= 1e18:
+                return warnings.warn("The number is too big to convert it to words in Turkish language.")
+            elif number == int(number):
                 return number_to_word(int(number)).replace("", "")
             else:
                 return warnings.warn("In Turkish language, decimal numbers are expressed with commas.")
