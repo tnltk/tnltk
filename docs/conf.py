@@ -18,12 +18,12 @@ sys.path.insert(0, os.path.abspath('../'))
 # -- Project information -----------------------------------------------------
 
 project = 'TNLTK'
-copyright = '2023, Tarık Kaan Koç'
+copyright = 'TNLTK'
 author = 'Tarık Kaan Koç'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
-version = 'latest'
+release = '0.99.5'
+version = '2 - Pre-Alpha'
 
 
 # -- General configuration ---------------------------------------------------

@@ -27,36 +27,30 @@ The Turkish Natural Language Toolkit currently, it includes the following method
 - {To be edited...}
 - {To be edited...}
 
-Please, refer to the `TNLTK Documentation <https://tnltk.readthedocs.io/en/latest/>`_ before using the toolkit.
 
 ----
-
-Installing Guide
-----------------
-
-Python version requirements: 3.8 <= python <= 3.10
-
-Using pip
----------
-
-.. code-block:: python
-    
-    $ pip install tnltk
 
 Contributing code to TNLTK
 --------------------------
 
 If you are interested in directly contributing to this project, please see `CONTRIBUTING <CONTRIBUTING.rst>`_.
 
-Issues with macOS
------------------
+Documentation
+=============
 
-If you have problems installing ``gcc`` using the command above, we recommend you to install it using `Homebrew <https://brew.sh>`_.
+Please, refer to the `TNLTK Documentation <https://tnltk.readthedocs.io/en/latest/>`_ before using the toolkit.
 
 Examples
 ========
 
 Additionally, you can refer to examples in the `respective folder <examples/>`_.
+
+License
+=======
+
+This project is open source under the `LICENSE <LICENSE>`_.
+
+-   Please note that this project is provided "as is" and comes with no warranty. (Use of this software is subject to the terms of the license agreement.) This software is licensed under Apache 2.0. See `LICENSE <LICENSE>`_.
 
 How to cite TNLTK in your publications
 ========================================
@@ -75,12 +69,6 @@ If you find TNLTK to be useful, please consider citing it in your published work
       year = {2023},
     }
 
-License
-=======
-
-This project is open source under the `LICENSE <LICENSE>`_.
-
-Please note that this project is provided "as is" and comes with no warranty. (Use of this software is subject to the terms of the license agreement.) This software is licensed under Apache 2.0. See `LICENSE <LICENSE>`_.
 
 References
 ==========

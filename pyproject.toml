@@ -1,3 +1,45 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "tnltk"
+version = "0.99.5"
+description = "TNLTK - Turkish Natural Language Toolkit developed by TNLTK Development Team."
+authors = ["Tarik Kaan Koc"]
+email = ["tarikkaan1koc@gmail.com"]
+readme = { "file" = "DESCRIPTION.md", "content-type" = "text/markdown" }
+license = { "text" = "Apache License, Version 2.0" }
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Text Processing",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9"
+]
+
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = ["yapf", "flake8", "pytest", "coverage"]
+
+[tool.setuptools.packages.find]
+include = ["tnltk", "tnltk.*"]
+namespaces = false
+
+#[tool.setuptools]
+#packages = ['tnltk*']
+
+[project.urls]
+Source = "https://github.com/tnltk/tnltk"
+Tracker = "https://github.com/tnltk/tnltk/issues"
+Documentation = "https://tnltk.readthedocs.io"

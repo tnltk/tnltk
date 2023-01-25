@@ -25,7 +25,7 @@ class Normalizer:
 
         Example:
         --------
-        >>> from tnltk import Normalizer
+        >>> from tnltk.normalizer import Normalizer
         >>> Normalizer.lower_case("Ex: İIĞÜÖŞÇ")
         'ex: iığüöşç'
         """
@@ -53,7 +53,7 @@ class Normalizer:
 
         Example:
         --------
-        >>> from tnltk import Normalizer
+        >>> from tnltk.normalizer import Normalizer
         >>> Normalizer.remove_punctuations("#Merhaba, Dünya!")
         'Merhaba Dünya'
         """
@@ -77,12 +77,12 @@ class Normalizer:
 
         Example:
         --------
-        >>> from tnltk import Normalizer
+        >>> from tnltk.normalizer import Normalizer
         >>> Normalizer.remove_accent_marks("merhâbâ")
         'merhaba'
         """
-        accent_marks = {'â':'a', 'ô':'o', 'î':'ı', 'ê':'e', 'û':'u',
-                        'Â':'A', 'Ô':'o', 'Î':'ı', 'Ê':'e', 'Û': 'u'}
+        accent_marks = {'â':'a', 'ô':'o', 'î':'i', 'ê':'e', 'û':'u',
+                        'Â':'A', 'Ô':'o', 'Î':'i', 'Ê':'e', 'Û': 'u'}
         for mark, letter in accent_marks.items():
             text = text.replace(mark, letter)
         return text
@@ -112,7 +112,7 @@ class Normalizer:
 
         Example:
         --------
-        >>> from tnltk import Normalizer
+        >>> from tnltk.normalizer import Normalizer
         >>> Normalizer.convert_text_numbers("Evi 1000000 TL Değerinde! Çok güzel bir evi var ama 3,5 ay boyunca satamamışlar...")
         'Evi bir milyon TL Değerinde! Çok güzel bir evi var ama üç virgül beş ay boyunca satamamışlar...
         """

@@ -1,9 +1,9 @@
 ISSUES TEMPLATE
 ===============
 
-If you have any issues with this project, please file them in the `issue <https://github.com/tnltk/tnltk/issues>`_ on tnltk/tnltk github repo.
+If you have any issues with this project, please file them in the `issue <https://github.com/tnltk/tnltk/issues>`_ on tnltk github repo.
 
-When filing an issue, please include the following information:
+When reporting an issue, please include the following information if necessary for your issue:
 
 * A clear, descriptive title
 * A detailed description of the issue
