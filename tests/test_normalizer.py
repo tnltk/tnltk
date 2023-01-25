@@ -31,5 +31,5 @@ class TestNormalizer(TestCase):
         self.assertEqual(Normalizer.remove_accent_marks(text), 'merhaba')
 
     def test_convert_text_numbers(self):
-        text = "2,5 kilgoram şeker ve 20 adet sucuk alabilir miyim?"
-        self.assertEqual(Normalizer.convert_text_numbers(text), "iki virgül beş kilgoram şeker ve yirmi adet sucuk alabilir miyim?")
+        text = "2,5 kilgoram şeker ve 2 adet ekmek alabilir miyim?"
+        self.assertEqual(Normalizer.convert_text_numbers(text), "iki virgül beş kilgoram şeker ve iki adet ekmek alabilir miyim?")
