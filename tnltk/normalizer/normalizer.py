@@ -82,7 +82,7 @@ class Normalizer:
         'merhaba'
         """
         accent_marks = {'â':'a', 'ô':'o', 'î':'i', 'ê':'e', 'û':'u',
-                        'Â':'A', 'Ô':'o', 'Î':'i', 'Ê':'e', 'Û': 'u'}
+                        'Â':'A', 'Ô':'O', 'Î':'İ', 'Ê':'E', 'Û': 'U'}
         for mark, letter in accent_marks.items():
             text = text.replace(mark, letter)
         return text
@@ -121,7 +121,7 @@ class Normalizer:
             if number >= 1e21:
                 return warnings.warn("The number is too big to convert it to words in Turkish language.")
             elif number == int(number):
-                return number_to_word(int(number)).replace("", "")
+                return number_to_word(int(number))
             else:
                 return warnings.warn("In Turkish language, decimal numbers are expressed with commas.")
-        return re.sub(r"[-+]?\d*.\d+|\d+", convert_number, text.replace(',', ' virgül '))
+        return re.sub(r"[-+]?\d*.\d+|\d+", convert_number, text.replace(","," virgül ")).lstrip()
