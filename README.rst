@@ -31,32 +31,11 @@ Please, refer to the `TNLTK Documentation <https://tnltk.readthedocs.io/en/lates
 
 ----
 
-Installing Guide
-----------------
-
-Python version requirements: 3.8 <= python <= 3.10
-
-Using pip
----------
-
-.. code-block:: python
-    
-    $ pip install tnltk
-
 Contributing code to TNLTK
 --------------------------
 
 If you are interested in directly contributing to this project, please see `CONTRIBUTING <CONTRIBUTING.rst>`_.
 
-Issues with macOS
------------------
-
-If you have problems installing ``gcc`` using the command above, we recommend you to install it using `Homebrew <https://brew.sh>`_.
-
-Examples
-========
-
-Additionally, you can refer to examples in the `respective folder <examples/>`_.
 
 How to cite TNLTK in your publications
 ========================================
