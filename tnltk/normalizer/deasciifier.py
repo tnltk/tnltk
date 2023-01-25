@@ -13606,7 +13606,6 @@ class Deasciifier:
         """
         return str[0:position] + char + str[position + 1:]
 
-    @staticmethod
     def deasciify(self):
         """
         Converts an ASCII-only string to a Turkish string by replacing characters with their corresponding Turkish letters.
@@ -13621,11 +13620,11 @@ class Deasciifier:
         Example
         -------
         >>> from tnltk.normalizer import Deasciifier
-        >>> example_input = "Tam o sirada gullerin arasindaki cicekleri kokluyorduk. Herşey işlık çaldıginda yasandi..."
+        >>> example_input = "O sirada bahcede cıcekleri kokluyorduk. Hersey bahcıvanın islik calmasiyla yasandi..."
         >>> deasciifier = Deasciifier(example_input)
         >>> converted_string = deasciifier.deasciify()
         >>> print(converted_string)
-        Tam o sırada güllerin arasındaki çiçekleri kokluyorduk. Herşey ıslık çaldığında yaşandı...
+        O sırada bahçede çiçekleri kokluyorduk. Herşey bahçıvanın ıslık çalmasıyla yaşandı...
         """
         for index in range(len(self.converted_string)):
             char = self.converted_string[index]
