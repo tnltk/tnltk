@@ -35,7 +35,6 @@ Contributing code to TNLTK
 
 If you are interested in directly contributing to this project, please see `CONTRIBUTING <CONTRIBUTING.rst>`_.
 
-<<<<<<< HEAD
 Documentation
 =============
 
@@ -45,8 +44,6 @@ Examples
 ========
 
 Additionally, you can refer to examples in the `respective folder <examples/>`_.
-=======
->>>>>>> 117fc195ceefb0b75a4a4376e0d2318f53a66d0f
 
 License
 =======
