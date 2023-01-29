@@ -125,3 +125,4 @@ class Normalizer:
             else:
                 return warnings.warn("In Turkish language, decimal numbers are expressed with commas.")
         return re.sub(r"[-+]?\d*.\d+|\d+", convert_number, text.replace(","," virgül ")).lstrip()
+    

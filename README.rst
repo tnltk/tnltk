@@ -1,6 +1,6 @@
 Turkish Natural Language Toolkit
 ================================
-.. image:: assets/tnltk_logo.png
+.. image:: docs/source/_static/tnltk_logo.png
 
 Roadmap and Future Plans
 ========================
@@ -47,7 +47,6 @@ Additionally, you can refer to examples in the `respective folder <examples/>`_.
 
 License
 =======
-
 This project is open source under the `LICENSE <LICENSE>`_.
 
 -   Please note that this project is provided "as is" and comes with no warranty. (Use of this software is subject to the terms of the license agreement.) This software is licensed under Apache 2.0. See `LICENSE <LICENSE>`_.
@@ -76,3 +75,4 @@ References
 * `"A Comparative Study on Turkish Deasciification Methods" <https://www.sciencedirect.com/science/article/pii/S221509862200101X>`_, A scientific article that presents a comparison of various methods for Turkish Deasciification.
 * `This repository contains a Turkish Deasciifier implementation in Python. <https://github.com/aysnrgenc/TurkishDeasciifier>`_
 * `This repository contains a Turkish Deasciifier implementation in Python which is based on a statistical model. <https://github.com/emres/turkish-deasciifier>`_
+* `Turkish Language Repository. <https://tdd.ai>`

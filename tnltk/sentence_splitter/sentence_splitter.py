@@ -46,7 +46,7 @@ non_breaking_prefixes_tr = [
 
 class SentenceSplitter:
     """
-    SentenceSplitter is a class used for splitting a text into sentences by considering `Turkish non-breaking prefixes <https://github.com/tnltk/tnltk/blob/main/data/non_breaking_prefixes_tr.txt>`_
+    SentenceSplitter is a class used for splitting a text into sentences by considering `Turkish non-breaking prefixes <https://github.com/tnltk/tnltk/blob/main/resources/TR_non_breaking_prefixes.txt>`_
      
     Methods: 
     --------

@@ -22,7 +22,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Package
+   :caption: Packages
 
    source/_package/sentence_splitter
    source/_package/normalizer
