@@ -39,7 +39,7 @@ class Deasciifier:
     """
 
     turkish_pattern_table = {
-        u'c': {
+        "c": {
             "bu aXa": -1,
             "Cki Xi": -2,
             "na Xog": 3,
@@ -2583,9 +2583,9 @@ class Deasciifier:
             "eXe": -2563,
             "aXa": -2564,
             "nX": -2565,
-            "X": 2566
+            "X": 2566,
         },
-        u'g': {
+        "g": {
             " s iX": 1,
             " oraX": -2,
             "loXi ": 3,
@@ -3337,9 +3337,9 @@ class Deasciifier:
             "uX": 753,
             "aX": 754,
             "Xi": 756,
-            "X": -757
+            "X": -757,
         },
-        u'o': {
+        "o": {
             "uz kXr": -1,
             "ni kXt": 2,
             "dir gX": 3,
@@ -4960,9 +4960,9 @@ class Deasciifier:
             "Xne": 1620,
             "Xz": 1621,
             " gX": 1622,
-            "X": -1623
+            "X": -1623,
         },
-        u's': {
+        "s": {
             "kut Xe": 1,
             "a nurX": 2,
             "lIXiyi": -3,
@@ -8160,9 +8160,9 @@ class Deasciifier:
             "Xm": 3210,
             "IX": 3211,
             "baX": 3212,
-            "X": -3213
+            "X": -3213,
         },
-        u'u': {
+        "u": {
             "Xctugu": -1,
             " ay sX": 2,
             "fXtur ": 3,
@@ -10556,9 +10556,9 @@ class Deasciifier:
             "Xze": 2405,
             "tXrk": 2406,
             "gX": 2407,
-            "X": -2408
+            "X": -2408,
         },
-        u'i': {
+        "i": {
             "n kXsan": -1,
             " nin Xn": -2,
             "tIyor X": -3,
@@ -13511,8 +13511,8 @@ class Deasciifier:
             "asX": 2972,
             "InX": 2973,
             "arX": 2974,
-            "X": -2975
-        }
+            "X": -2975,
+        },
     }
 
     context_size = 10
@@ -13532,52 +13532,50 @@ class Deasciifier:
         self.ascii_string = ascii_string
         self.converted_string = ascii_string
         self.turkish_asciify_table = {
-            'ç': 'c',
-            'Ç': 'C',
-            'ğ': 'g',
-            'Ğ': 'G',
-            'ö': 'o',
-            'Ö': 'O',
-            'ü': 'u',
-            'Ü': 'U',
-            'ı': 'i',
-            'İ': 'I',
-            'ş': 's',
-            'Ş': 'S'
+            "ç": "c",
+            "Ç": "C",
+            "ğ": "g",
+            "Ğ": "G",
+            "ö": "o",
+            "Ö": "O",
+            "ü": "u",
+            "Ü": "U",
+            "ı": "i",
+            "İ": "I",
+            "ş": "s",
+            "Ş": "S",
         }
         self.turkish_downcase_asciify_table = {
-            **{ch: ch.lower()
-               for ch in string.ascii_uppercase},
-            **{ch.lower(): ch.lower()
-               for ch in string.ascii_uppercase}, 'ç': 'c',
-            'Ç': 'c',
-            'ğ': 'g',
-            'Ğ': 'g',
-            'ö': 'o',
-            'Ö': 'o',
-            'ü': 'u',
-            'Ü': 'u',
-            'ı': 'i',
-            'İ': 'i',
-            'ş': 's',
-            'Ş': 's'
+            **{ch: ch.lower() for ch in string.ascii_uppercase},
+            **{ch.lower(): ch.lower() for ch in string.ascii_uppercase},
+            "ç": "c",
+            "Ç": "c",
+            "ğ": "g",
+            "Ğ": "g",
+            "ö": "o",
+            "Ö": "o",
+            "ü": "u",
+            "Ü": "u",
+            "ı": "i",
+            "İ": "i",
+            "ş": "s",
+            "Ş": "s",
         }
         self.turkish_upcase_accents_table = {
-            **{ch: ch.lower()
-               for ch in string.ascii_uppercase},
-            **{ch.lower(): ch.lower()
-               for ch in string.ascii_uppercase}, 'ç': 'C',
-            'Ç': 'C',
-            'ğ': 'G',
-            'Ğ': 'G',
-            'ö': 'O',
-            'Ö': 'O',
-            'ü': 'U',
-            'Ü': 'U',
-            'ı': 'I',
-            'İ': 'I',
-            'ş': 'S',
-            'Ş': 'S'
+            **{ch: ch.lower() for ch in string.ascii_uppercase},
+            **{ch.lower(): ch.lower() for ch in string.ascii_uppercase},
+            "ç": "C",
+            "Ç": "C",
+            "ğ": "G",
+            "Ğ": "G",
+            "ö": "O",
+            "Ö": "O",
+            "ü": "U",
+            "Ü": "U",
+            "ı": "I",
+            "İ": "I",
+            "ş": "S",
+            "Ş": "S",
         }
 
     def set_char_at(self, str, position, char):
@@ -13604,7 +13602,7 @@ class Deasciifier:
         >>> deasciifier.set_char_at("hello world", 5, ",")
         'hello,world'
         """
-        return str[0:position] + char + str[position + 1:]
+        return str[0:position] + char + str[position + 1 :]
 
     def deasciify(self):
         """
@@ -13619,7 +13617,7 @@ class Deasciifier:
 
         Example
         -------
-        >>> from tnltk.normalizer import Deasciifier
+        >>> from tnltk import Deasciifier
         >>> example_input = "O sirada bahcede cıcekleri kokluyorduk. Hersey bahcıvanın islik calmasiyla yasandi..."
         >>> deasciifier = Deasciifier(example_input)
         >>> converted_string = deasciifier.deasciify()
@@ -13629,12 +13627,9 @@ class Deasciifier:
         for index in range(len(self.converted_string)):
             char = self.converted_string[index]
             if self.turkish_need_correction(char, point=index):
-                self.converted_string = self.set_char_at(
-                    self.converted_string, index,
-                    self.turkish_toggle_accent(char))
+                self.converted_string = self.set_char_at(self.converted_string, index, self.turkish_toggle_accent(char))
             else:
-                self.converted_string = self.set_char_at(
-                    self.converted_string, index, char)
+                self.converted_string = self.set_char_at(self.converted_string, index, char)
 
         return self.converted_string
 
@@ -13659,30 +13654,30 @@ class Deasciifier:
         'ı'
         """
         turkish_toggle_accent_table = {
-            u'c': u'ç',
-            u'C': u'Ç',
-            u'g': u'ğ',
-            u'G': u'Ğ',
-            u'o': u'ö',
-            u'O': u'Ö',
-            u'u': u'ü',
-            u'U': u'Ü',
-            u'i': u'ı',
-            u'I': u'İ',
-            u's': u'ş',
-            u'S': u'Ş',
-            u'ç': u'c',
-            u'Ç': u'C',
-            u'ğ': u'g',
-            u'Ğ': u'G',
-            u'ö': u'o',
-            u'Ö': u'O',
-            u'ü': u'u',
-            u'Ü': u'U',
-            u'ı': u'i',
-            u'İ': u'I',
-            u'ş': u's',
-            u'Ş': u'S'
+            "c": "ç",
+            "C": "Ç",
+            "g": "ğ",
+            "G": "Ğ",
+            "o": "ö",
+            "O": "Ö",
+            "u": "ü",
+            "U": "Ü",
+            "i": "ı",
+            "I": "İ",
+            "s": "ş",
+            "S": "Ş",
+            "ç": "c",
+            "Ç": "C",
+            "ğ": "g",
+            "Ğ": "G",
+            "ö": "o",
+            "Ö": "O",
+            "ü": "u",
+            "Ü": "U",
+            "ı": "i",
+            "İ": "I",
+            "ş": "s",
+            "Ş": "S",
         }
         return turkish_toggle_accent_table.get(c, c)
 
@@ -13718,7 +13713,7 @@ class Deasciifier:
         else:
             m = False
 
-        if tr == u'I':
+        if tr == "I":
             if ch == tr:
                 return not m
             else:
@@ -13794,8 +13789,8 @@ class Deasciifier:
         >>> example_input.get_context(context_size, point)
         'is a sa'
         """
-        s = ' ' * (1 + (2 * size))
-        s = s[0:size] + 'X' + s[size + 1:]
+        s = " " * (1 + (2 * size))
+        s = s[0:size] + "X" + s[size + 1 :]
         i = 1 + size
         space = False
         index = point
@@ -13811,7 +13806,7 @@ class Deasciifier:
                     i = i + 1
                     space = True
             else:
-                s = s[0:i] + x + s[i + 1:]
+                s = s[0:i] + x + s[i + 1 :]
                 i = i + 1
                 space = False
             index = index + 1
@@ -13831,7 +13826,7 @@ class Deasciifier:
                     i = i - 1
                     space = True
             else:
-                s = s[0:i] + x + s[i + 1:]
+                s = s[0:i] + x + s[i + 1 :]
                 i = i - 1
                 space = False
             index = index - 1

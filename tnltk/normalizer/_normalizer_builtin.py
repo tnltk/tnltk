@@ -10,6 +10,7 @@ of 100 and then converting each group to words using the provided lists of ones 
 These functions are used by normalizer.py script to perform number to word conversion tasks.
 """
 
+
 def _convert_group(number: int, ones: list, tens: list) -> str:
     """
     Convert the given number to words in Turkish language
@@ -47,6 +48,7 @@ def _convert_group(number: int, ones: list, tens: list) -> str:
         word += " " + ones[number]
     return word.strip()
 
+
 def number_to_word(number: int) -> str:
     """
     Convert the given number to words in Turkish language
@@ -69,8 +71,8 @@ def number_to_word(number: int) -> str:
     """
     negative_expression = None
     if int(number) < 0:
-        number = str(number).split('-')[1]
-        negative_expression = 'eksi '
+        number = str(number).split("-")[1]
+        negative_expression = "eksi "
         number = int(number)
 
     ones = ["sıfır", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz"]

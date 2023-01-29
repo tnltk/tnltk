@@ -1,5 +1,7 @@
 from unittest import TestCase
+
 from tnltk.normalizer import Deasciifier
+
 
 class TestDeasciifier(TestCase):
     """
@@ -9,8 +11,11 @@ class TestDeasciifier(TestCase):
     The expected result is then compared with the actual result using the assertEqual method from the unittest.TestCase class.
     This test ensures that the deasciify method correctly replaces ASCII characters with their Turkish equivalents in the given string.
     """
+
     def test_deasciify(self):
-        deasciifier = Deasciifier("O sirada bahcede cıcekleri kokluyorduk. Hersey bahcıvanın islik calmasiyla yasandi...")
+        deasciifier = Deasciifier(
+            "O sirada bahcede cıcekleri kokluyorduk. Hersey bahcıvanın islik calmasiyla yasandi..."
+        )
         result = deasciifier.deasciify()
         expected_result = "O sırada bahçede çiçekleri kokluyorduk. Herşey bahçıvanın ıslık çalmasıyla yaşandı..."
         self.assertEqual(result, expected_result)

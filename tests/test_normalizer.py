@@ -1,5 +1,7 @@
 from unittest import TestCase
+
 from tnltk.normalizer import Normalizer
+
 
 class TestNormalizer(TestCase):
     """
@@ -18,18 +20,21 @@ class TestNormalizer(TestCase):
     test_convert_text_numbers()
         Test the convert_text_numbers method of Normalizer class by passing a sample text and comparing its output with the expected output.
     """
+
     def test_lower_case(self):
         text = "Ex: İIĞÜÖŞÇ"
-        self.assertEqual(Normalizer.lower_case(text), 'ex: iığüöşç')
+        self.assertEqual(Normalizer.lower_case(text), "ex: iığüöşç")
 
     def test_remove_punctuations(self):
         text = "#Merhaba, Dünya!"
-        self.assertEqual(Normalizer.remove_punctuations(text), 'Merhaba Dünya')
+        self.assertEqual(Normalizer.remove_punctuations(text), "Merhaba Dünya")
 
     def test_remove_accent_marks(self):
         text = "merhâbâ"
-        self.assertEqual(Normalizer.remove_accent_marks(text), 'merhaba')
+        self.assertEqual(Normalizer.remove_accent_marks(text), "merhaba")
 
     def test_convert_text_numbers(self):
         text = "2,5 kilgoram şeker ve 2 adet ekmek alabilir miyim?"
-        self.assertEqual(Normalizer.convert_text_numbers(text), "iki virgül beş kilgoram şeker ve iki adet ekmek alabilir miyim?")
+        self.assertEqual(
+            Normalizer.convert_text_numbers(text), "iki virgül beş kilgoram şeker ve iki adet ekmek alabilir miyim?"
+        )

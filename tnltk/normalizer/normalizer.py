@@ -1,21 +1,22 @@
+import re
 import string
 import warnings
+
 from ._normalizer_builtin import number_to_word
-import re
+
 
 class Normalizer:
-
     @staticmethod
     def lower_case(text: str) -> str:
         """
         Converts a string of text to lowercase for Turkish language.
-        
-        This function handles all Turkish characters which are not handled properly by python lower() method, 
+
+        This function handles all Turkish characters which are not handled properly by python lower() method,
         e.g., "İ" -> "i", "I" -> "ı", "Ğ" -> "ğ", "Ü" -> "ü", "Ö" -> "ö", "Ş" -> "ş", "Ç" -> "ç".
 
         Parameters
         ----------
-        text : str 
+        text : str
             Input text.
 
         Returns
@@ -25,7 +26,7 @@ class Normalizer:
 
         Example:
         --------
-        >>> from tnltk.normalizer import Normalizer
+        >>> from tnltk import Normalizer
         >>> Normalizer.lower_case("Ex: İIĞÜÖŞÇ")
         'ex: iığüöşç'
         """
@@ -35,15 +36,15 @@ class Normalizer:
         return text.lower()
 
     @staticmethod
-    def remove_punctuations(text: str)-> str:
+    def remove_punctuations(text: str) -> str:
         """
         Removes punctuations (!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~) from the given string.
-        
+
         This function removes all the punctuation characters from the given text.
 
         Parameters
         ----------
-        text : str 
+        text : str
             Input text.
 
         Returns
@@ -53,21 +54,20 @@ class Normalizer:
 
         Example:
         --------
-        >>> from tnltk.normalizer import Normalizer
+        >>> from tnltk import Normalizer
         >>> Normalizer.remove_punctuations("#Merhaba, Dünya!")
         'Merhaba Dünya'
         """
-        return re.sub(f'[{string.punctuation}]', '', text)
-
+        return re.sub(f"[{string.punctuation}]", "", text)
 
     @staticmethod
-    def remove_accent_marks(text: str)-> str:
+    def remove_accent_marks(text: str) -> str:
         """
         Removes accent marks from the given string.
 
         Parameters
         ----------
-        text : str 
+        text : str
             Input text.
 
         Returns
@@ -77,16 +77,25 @@ class Normalizer:
 
         Example:
         --------
-        >>> from tnltk.normalizer import Normalizer
+        >>> from tnltk import Normalizer
         >>> Normalizer.remove_accent_marks("merhâbâ")
         'merhaba'
         """
-        accent_marks = {'â':'a', 'ô':'o', 'î':'i', 'ê':'e', 'û':'u',
-                        'Â':'A', 'Ô':'O', 'Î':'İ', 'Ê':'E', 'Û': 'U'}
+        accent_marks = {
+            "â": "a",
+            "ô": "o",
+            "î": "i",
+            "ê": "e",
+            "û": "u",
+            "Â": "A",
+            "Ô": "O",
+            "Î": "İ",
+            "Ê": "E",
+            "Û": "U",
+        }
         for mark, letter in accent_marks.items():
             text = text.replace(mark, letter)
         return text
-
 
     @staticmethod
     def convert_text_numbers(text):
@@ -112,10 +121,11 @@ class Normalizer:
 
         Example:
         --------
-        >>> from tnltk.normalizer import Normalizer
+        >>> from tnltk import Normalizer
         >>> Normalizer.convert_text_numbers("Evi 1000000 TL Değerinde! Çok güzel bir evi var ama 3,5 ay boyunca satamamışlar...")
         'Evi bir milyon TL Değerinde! Çok güzel bir evi var ama üç virgül beş ay boyunca satamamışlar...
         """
+
         def convert_number(match):
             number = float(match.group(0).replace(",", "."))
             if number >= 1e21:
@@ -124,5 +134,5 @@ class Normalizer:
                 return number_to_word(int(number))
             else:
                 return warnings.warn("In Turkish language, decimal numbers are expressed with commas.")
-        return re.sub(r"[-+]?\d*.\d+|\d+", convert_number, text.replace(","," virgül ")).lstrip()
-    
+
+        return re.sub(r"[-+]?\d*.\d+|\d+", convert_number, text.replace(",", " virgül ")).lstrip()
