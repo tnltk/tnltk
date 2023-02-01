@@ -38,3 +38,8 @@ class TestNormalizer(TestCase):
         self.assertEqual(
             Normalizer.convert_text_numbers(text), "iki virgül beş kilgoram şeker ve iki adet ekmek alabilir miyim?"
         )
+
+    def test_remove_stop_words(self):
+        text = "Bugün hava çok güzel ve ben çok iyi hissediyorum."
+        self.assertEqual(Normalizer.remove_stop_words(text), "hava hissediyorum.")
+

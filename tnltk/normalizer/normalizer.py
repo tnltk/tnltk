@@ -157,7 +157,7 @@ class Normalizer:
         --------
         >>> from tnltk import Normalizer
         >>> Normalizer.remove_stop_words("Bugün hava çok güzel ve ben çok iyi hissediyorum.")
-        'bugün hava güzel ben iyi hissediyorum.'.
+        'hava hissediyorum.'.
         """
         with open('resources/TR_stop_words.txt', 'r', encoding='utf-8') as f:
             stop = [line.strip() for line in f]
