@@ -136,3 +136,30 @@ class Normalizer:
                 return warnings.warn("In Turkish language, decimal numbers are expressed with commas.")
 
         return re.sub(r"[-+]?\d*.\d+|\d+", convert_number, text.replace(",", " virgül ")).lstrip()
+
+
+    @staticmethod
+    def remove_stop_words(text:str) -> str:
+        """
+        Removes stop words from the given string.
+
+        Parameters
+        ----------
+        text : str
+            Input text.
+
+        Returns
+        -------
+        text : str
+            Text stripped from stop words.
+
+        Example:
+        --------
+        >>> from tnltk import Normalizer
+        >>> Normalizer.remove_stop_words("Bugün hava çok güzel ve ben çok iyi hissediyorum.")
+        'bugün hava güzel ben iyi hissediyorum.'.
+        """
+        with open('resources/TR_stop_words.txt', 'r', encoding='utf-8') as f:
+            stop = [line.strip() for line in f]
+        return ' '.join([word for word in text.split() if word.lower() not in stop])
+
