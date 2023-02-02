@@ -1,11 +1,11 @@
 import re
 import string
 import warnings
-
-from ._normalizer_builtin import number_to_word
-
+from ._builtin import DeasciifierBuiltin, NormBuiltin
+from typing import List
 
 class Normalizer:
+    
     @staticmethod
     def lower_case(text: str) -> str:
         """
@@ -131,8 +131,34 @@ class Normalizer:
             if number >= 1e21:
                 return warnings.warn("The number is too big to convert it to words in Turkish language.")
             elif number == int(number):
-                return number_to_word(int(number))
+                return NormBuiltin.number_to_word(number=int(number))
             else:
                 return warnings.warn("In Turkish language, decimal numbers are expressed with commas.")
 
         return re.sub(r"[-+]?\d*.\d+|\d+", convert_number, text.replace(",", " virgül ")).lstrip()
+
+    
+    @staticmethod
+    def deasciify(input: List[str]) -> List[str]:
+        """
+        Deasciifies the given text for Turkish.
+        
+        Parameters
+        ----------
+        input : List[str] 
+            List of input str.
+                
+        Returns
+        -------
+        result : List[str]
+            The converted Turkish string.
+        
+        Example:
+        --------
+        >>> from tnltk import Normalizer
+        >>> Normalizer().deasciify("O sirada bahcede cıcekleri kokluyorduk. Hersey bahcıvanın islik calmasiyla yasandi...")
+        'O sırada bahçede çiçekleri kokluyorduk. Herşey bahçıvanın ıslık çalmasıyla yaşandı...'
+        """
+        deasciifier = DeasciifierBuiltin(input)
+        result = deasciifier.convert_to_turkish()
+        return result
