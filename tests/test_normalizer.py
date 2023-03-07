@@ -1,7 +1,5 @@
 from unittest import TestCase
-
 from tnltk.normalizer import Normalizer
-
 
 class TestNormalizer(TestCase):
     """
@@ -38,3 +36,11 @@ class TestNormalizer(TestCase):
         self.assertEqual(
             Normalizer.convert_text_numbers(text), "iki virgül beş kilgoram şeker ve iki adet ekmek alabilir miyim?"
         )
+
+    def test_deasciify(self):
+        deasciifier = Normalizer.Deasciifier(
+            "O sirada bahcede cıcekleri kokluyorduk. Hersey bahcıvanın islik calmasiyla yasandi...")
+        
+        result = deasciifier.deasciify()
+        expected_result = "O sırada bahçede çiçekleri kokluyorduk. Herşey bahçıvanın ıslık çalmasıyla yaşandı..."
+        self.assertEqual(result, expected_result)
